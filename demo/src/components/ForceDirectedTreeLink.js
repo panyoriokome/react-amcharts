@@ -21,6 +21,15 @@ function ForceDirectedTreeLink (props) {
 
     series.data = props.data
 
+    // Linkの太さを設定
+    series.links.template.propertyFields.strokeWidth = "linkWidth";
+
+    chart.legend = new am4charts.Legend();
+
+    // Tooltip on links
+    series.links.template.tooltipText = "共起の程度: [bold]{linkWidth}[/]";
+    series.links.template.interactionsEnabled = true;
+
     // Set up data fields
     series.dataFields.value = "value";
     series.dataFields.id = "name";
