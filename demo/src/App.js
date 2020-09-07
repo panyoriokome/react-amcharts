@@ -4,6 +4,8 @@ import WordCloudTextData from './components/WordcloudTextData';
 import WordCludStructuredData from './components/WordCloudStructuredData'
 import ForceDirectedTree from './components/ForceDirectedTree'
 import ForceDirectedTreeLink from './components/ForceDirectedTreeLink'
+import DivergentStackedBars from './components/DivergentStackedBars'
+import HorizontallyStackedAxes from './components/HorizontallyStackedAxes'
 import Button from './components/Button'
 
 const initialData = [
@@ -132,6 +134,8 @@ function App() {
       <ForceDirectedTree />
       <ForceDirectedTreeLink data={treeLinkData}/>
       <Button onClick={handleClick}>データ変更</Button>
+      <DivergentStackedBars />
+      <HorizontallyStackedAxes />
     </div>
   );
 }
